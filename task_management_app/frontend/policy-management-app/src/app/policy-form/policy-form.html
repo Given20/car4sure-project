@@ -14,16 +14,14 @@
       <div class="form-row">
         <div class="form-group">
           <label for="policy_no">Policy Number *</label>
-          <input type="text" id="policy_no" formControlName="policy_no" 
-                 [class.error]="isFieldInvalid('policy_no')">
+          <input type="text" id="policy_no" formControlName="policy_no" [class.error]="isFieldInvalid('policy_no')">
           <div class="error-message" *ngIf="isFieldInvalid('policy_no')">
             {{ getFieldError('policy_no') }}
           </div>
         </div>
         <div class="form-group">
           <label for="policy_status">Policy Status *</label>
-          <select id="policy_status" formControlName="policy_status" 
-                  [class.error]="isFieldInvalid('policy_status')">
+          <select id="policy_status" formControlName="policy_status" [class.error]="isFieldInvalid('policy_status')">
             <option value="Active">Active</option>
             <option value="Inactive">Inactive</option>
             <option value="Pending">Pending</option>
@@ -48,16 +46,14 @@
       <div class="form-row">
         <div class="form-group">
           <label for="policy_effective_date">Effective Date *</label>
-          <input type="date" id="policy_effective_date" formControlName="policy_effective_date" 
-                 [class.error]="isFieldInvalid('policy_effective_date')">
+          <input type="date" id="policy_effective_date" formControlName="policy_effective_date" [class.error]="isFieldInvalid('policy_effective_date')">
           <div class="error-message" *ngIf="isFieldInvalid('policy_effective_date')">
             {{ getFieldError('policy_effective_date') }}
           </div>
         </div>
         <div class="form-group">
           <label for="policy_expiration_date">Expiration Date *</label>
-          <input type="date" id="policy_expiration_date" formControlName="policy_expiration_date" 
-                 [class.error]="isFieldInvalid('policy_expiration_date')">
+          <input type="date" id="policy_expiration_date" formControlName="policy_expiration_date" [class.error]="isFieldInvalid('policy_expiration_date')">
           <div class="error-message" *ngIf="isFieldInvalid('policy_expiration_date')">
             {{ getFieldError('policy_expiration_date') }}
           </div>
@@ -71,16 +67,14 @@
       <div class="form-row">
         <div class="form-group">
           <label for="policy_holder_first_name">First Name *</label>
-          <input type="text" id="policy_holder_first_name" formControlName="policy_holder_first_name" 
-                 [class.error]="isFieldInvalid('policy_holder_first_name')">
+          <input type="text" id="policy_holder_first_name" formControlName="policy_holder_first_name" [class.error]="isFieldInvalid('policy_holder_first_name')">
           <div class="error-message" *ngIf="isFieldInvalid('policy_holder_first_name')">
             {{ getFieldError('policy_holder_first_name') }}
           </div>
         </div>
         <div class="form-group">
           <label for="policy_holder_last_name">Last Name *</label>
-          <input type="text" id="policy_holder_last_name" formControlName="policy_holder_last_name" 
-                 [class.error]="isFieldInvalid('policy_holder_last_name')">
+          <input type="text" id="policy_holder_last_name" formControlName="policy_holder_last_name" [class.error]="isFieldInvalid('policy_holder_last_name')">
           <div class="error-message" *ngIf="isFieldInvalid('policy_holder_last_name')">
             {{ getFieldError('policy_holder_last_name') }}
           </div>
@@ -89,8 +83,7 @@
       <div class="form-row">
         <div class="form-group full-width">
           <label for="policy_holder_street">Street Address *</label>
-          <input type="text" id="policy_holder_street" formControlName="policy_holder_street" 
-                 [class.error]="isFieldInvalid('policy_holder_street')">
+          <input type="text" id="policy_holder_street" formControlName="policy_holder_street" [class.error]="isFieldInvalid('policy_holder_street')">
           <div class="error-message" *ngIf="isFieldInvalid('policy_holder_street')">
             {{ getFieldError('policy_holder_street') }}
           </div>
@@ -99,24 +92,21 @@
       <div class="form-row">
         <div class="form-group">
           <label for="policy_holder_city">City *</label>
-          <input type="text" id="policy_holder_city" formControlName="policy_holder_city" 
-                 [class.error]="isFieldInvalid('policy_holder_city')">
+          <input type="text" id="policy_holder_city" formControlName="policy_holder_city" [class.error]="isFieldInvalid('policy_holder_city')">
           <div class="error-message" *ngIf="isFieldInvalid('policy_holder_city')">
             {{ getFieldError('policy_holder_city') }}
           </div>
         </div>
         <div class="form-group">
           <label for="policy_holder_state">State *</label>
-          <input type="text" id="policy_holder_state" formControlName="policy_holder_state" 
-                 [class.error]="isFieldInvalid('policy_holder_state')">
+          <input type="text" id="policy_holder_state" formControlName="policy_holder_state" [class.error]="isFieldInvalid('policy_holder_state')">
           <div class="error-message" *ngIf="isFieldInvalid('policy_holder_state')">
             {{ getFieldError('policy_holder_state') }}
           </div>
         </div>
         <div class="form-group">
           <label for="policy_holder_zip">ZIP Code *</label>
-          <input type="text" id="policy_holder_zip" formControlName="policy_holder_zip" 
-                 [class.error]="isFieldInvalid('policy_holder_zip')">
+          <input type="text" id="policy_holder_zip" formControlName="policy_holder_zip" [class.error]="isFieldInvalid('policy_holder_zip')">
           <div class="error-message" *ngIf="isFieldInvalid('policy_holder_zip')">
             {{ getFieldError('policy_holder_zip') }}
           </div>
@@ -130,24 +120,21 @@
       <div class="form-row">
         <div class="form-group">
           <label for="driver_first_name">First Name *</label>
-          <input type="text" id="driver_first_name" formControlName="driver_first_name" 
-                 [class.error]="isFieldInvalid('driver_first_name')">
+          <input type="text" id="driver_first_name" formControlName="driver_first_name" [class.error]="isFieldInvalid('driver_first_name')">
           <div class="error-message" *ngIf="isFieldInvalid('driver_first_name')">
             {{ getFieldError('driver_first_name') }}
           </div>
         </div>
         <div class="form-group">
           <label for="driver_last_name">Last Name *</label>
-          <input type="text" id="driver_last_name" formControlName="driver_last_name" 
-                 [class.error]="isFieldInvalid('driver_last_name')">
+          <input type="text" id="driver_last_name" formControlName="driver_last_name" [class.error]="isFieldInvalid('driver_last_name')">
           <div class="error-message" *ngIf="isFieldInvalid('driver_last_name')">
             {{ getFieldError('driver_last_name') }}
           </div>
         </div>
         <div class="form-group">
           <label for="driver_age">Age *</label>
-          <input type="number" id="driver_age" formControlName="driver_age" 
-                 [class.error]="isFieldInvalid('driver_age')">
+          <input type="number" id="driver_age" formControlName="driver_age" [class.error]="isFieldInvalid('driver_age')">
           <div class="error-message" *ngIf="isFieldInvalid('driver_age')">
             {{ getFieldError('driver_age') }}
           </div>
@@ -156,8 +143,7 @@
       <div class="form-row">
         <div class="form-group">
           <label for="driver_gender">Gender *</label>
-          <select id="driver_gender" formControlName="driver_gender" 
-                  [class.error]="isFieldInvalid('driver_gender')">
+          <select id="driver_gender" formControlName="driver_gender" [class.error]="isFieldInvalid('driver_gender')">
             <option value="">Select Gender</option>
             <option value="Male">Male</option>
             <option value="Female">Female</option>
@@ -169,8 +155,7 @@
         </div>
         <div class="form-group">
           <label for="driver_marital_status">Marital Status *</label>
-          <select id="driver_marital_status" formControlName="driver_marital_status" 
-                  [class.error]="isFieldInvalid('driver_marital_status')">
+          <select id="driver_marital_status" formControlName="driver_marital_status" [class.error]="isFieldInvalid('driver_marital_status')">
             <option value="">Select Status</option>
             <option value="Single">Single</option>
             <option value="Married">Married</option>
@@ -185,24 +170,21 @@
       <div class="form-row">
         <div class="form-group">
           <label for="driver_license_number">License Number *</label>
-          <input type="text" id="driver_license_number" formControlName="driver_license_number" 
-                 [class.error]="isFieldInvalid('driver_license_number')">
+          <input type="text" id="driver_license_number" formControlName="driver_license_number" [class.error]="isFieldInvalid('driver_license_number')">
           <div class="error-message" *ngIf="isFieldInvalid('driver_license_number')">
             {{ getFieldError('driver_license_number') }}
           </div>
         </div>
         <div class="form-group">
           <label for="driver_license_state">License State *</label>
-          <input type="text" id="driver_license_state" formControlName="driver_license_state" 
-                 [class.error]="isFieldInvalid('driver_license_state')">
+          <input type="text" id="driver_license_state" formControlName="driver_license_state" [class.error]="isFieldInvalid('driver_license_state')">
           <div class="error-message" *ngIf="isFieldInvalid('driver_license_state')">
             {{ getFieldError('driver_license_state') }}
           </div>
         </div>
         <div class="form-group">
           <label for="driver_license_status">License Status *</label>
-          <input type="text" id="driver_license_status" formControlName="driver_license_status" 
-                 [class.error]="isFieldInvalid('driver_license_status')">
+          <input type="text" id="driver_license_status" formControlName="driver_license_status" [class.error]="isFieldInvalid('driver_license_status')">
           <div class="error-message" *ngIf="isFieldInvalid('driver_license_status')">
             {{ getFieldError('driver_license_status') }}
           </div>
@@ -211,24 +193,21 @@
       <div class="form-row">
         <div class="form-group">
           <label for="driver_license_effective_date">License Effective Date *</label>
-          <input type="date" id="driver_license_effective_date" formControlName="driver_license_effective_date" 
-                 [class.error]="isFieldInvalid('driver_license_effective_date')">
+          <input type="date" id="driver_license_effective_date" formControlName="driver_license_effective_date" [class.error]="isFieldInvalid('driver_license_effective_date')">
           <div class="error-message" *ngIf="isFieldInvalid('driver_license_effective_date')">
             {{ getFieldError('driver_license_effective_date') }}
           </div>
         </div>
         <div class="form-group">
           <label for="driver_license_expiration_date">License Expiration Date *</label>
-          <input type="date" id="driver_license_expiration_date" formControlName="driver_license_expiration_date" 
-                 [class.error]="isFieldInvalid('driver_license_expiration_date')">
+          <input type="date" id="driver_license_expiration_date" formControlName="driver_license_expiration_date" [class.error]="isFieldInvalid('driver_license_expiration_date')">
           <div class="error-message" *ngIf="isFieldInvalid('driver_license_expiration_date')">
             {{ getFieldError('driver_license_expiration_date') }}
           </div>
         </div>
         <div class="form-group">
           <label for="driver_license_class">License Class *</label>
-          <input type="text" id="driver_license_class" formControlName="driver_license_class" 
-                 [class.error]="isFieldInvalid('driver_license_class')">
+          <input type="text" id="driver_license_class" formControlName="driver_license_class" [class.error]="isFieldInvalid('driver_license_class')">
           <div class="error-message" *ngIf="isFieldInvalid('driver_license_class')">
             {{ getFieldError('driver_license_class') }}
           </div>
@@ -242,24 +221,21 @@
       <div class="form-row">
         <div class="form-group">
           <label for="vehicle_year">Year *</label>
-          <input type="number" id="vehicle_year" formControlName="vehicle_year" 
-                 [class.error]="isFieldInvalid('vehicle_year')">
+          <input type="number" id="vehicle_year" formControlName="vehicle_year" [class.error]="isFieldInvalid('vehicle_year')">
           <div class="error-message" *ngIf="isFieldInvalid('vehicle_year')">
             {{ getFieldError('vehicle_year') }}
           </div>
         </div>
         <div class="form-group">
           <label for="vehicle_make">Make *</label>
-          <input type="text" id="vehicle_make" formControlName="vehicle_make" 
-                 [class.error]="isFieldInvalid('vehicle_make')">
+          <input type="text" id="vehicle_make" formControlName="vehicle_make" [class.error]="isFieldInvalid('vehicle_make')">
           <div class="error-message" *ngIf="isFieldInvalid('vehicle_make')">
             {{ getFieldError('vehicle_make') }}
           </div>
         </div>
         <div class="form-group">
           <label for="vehicle_model">Model *</label>
-          <input type="text" id="vehicle_model" formControlName="vehicle_model" 
-                 [class.error]="isFieldInvalid('vehicle_model')">
+          <input type="text" id="vehicle_model" formControlName="vehicle_model" [class.error]="isFieldInvalid('vehicle_model')">
           <div class="error-message" *ngIf="isFieldInvalid('vehicle_model')">
             {{ getFieldError('vehicle_model') }}
           </div>
@@ -268,8 +244,7 @@
       <div class="form-row">
         <div class="form-group full-width">
           <label for="vehicle_vin">VIN (17 characters) *</label>
-          <input type="text" id="vehicle_vin" formControlName="vehicle_vin" 
-                 [class.error]="isFieldInvalid('vehicle_vin')" maxlength="17" pattern="[A-HJ-NPR-Z0-9]{17}">
+          <input type="text" id="vehicle_vin" formControlName="vehicle_vin"  [class.error]="isFieldInvalid('vehicle_vin')" maxlength="17" pattern="[A-HJ-NPR-Z0-9]{17}">
           <div class="error-message" *ngIf="isFieldInvalid('vehicle_vin')">
             {{ getFieldError('vehicle_vin') }}
           </div>
@@ -278,8 +253,7 @@
       <div class="form-row">
         <div class="form-group">
           <label for="vehicle_usage">Usage *</label>
-          <select id="vehicle_usage" formControlName="vehicle_usage" 
-                  [class.error]="isFieldInvalid('vehicle_usage')">
+          <select id="vehicle_usage" formControlName="vehicle_usage" [class.error]="isFieldInvalid('vehicle_usage')">
             <option value="">Select Usage</option>
             <option value="Pleasure">Pleasure</option>
             <option value="Commuting">Commuting</option>
@@ -291,8 +265,7 @@
         </div>
         <div class="form-group">
           <label for="vehicle_primary_use">Primary Use *</label>
-          <select id="vehicle_primary_use" formControlName="vehicle_primary_use" 
-                  [class.error]="isFieldInvalid('vehicle_primary_use')">
+          <select id="vehicle_primary_use" formControlName="vehicle_primary_use" [class.error]="isFieldInvalid('vehicle_primary_use')">
             <option value="">Select Primary Use</option>
             <option value="Commuting">Commuting</option>
             <option value="Pleasure">Pleasure</option>
@@ -306,16 +279,14 @@
       <div class="form-row">
         <div class="form-group">
           <label for="vehicle_annual_mileage">Annual Mileage *</label>
-          <input type="number" id="vehicle_annual_mileage" formControlName="vehicle_annual_mileage" 
-                 [class.error]="isFieldInvalid('vehicle_annual_mileage')">
+          <input type="number" id="vehicle_annual_mileage" formControlName="vehicle_annual_mileage" [class.error]="isFieldInvalid('vehicle_annual_mileage')">
           <div class="error-message" *ngIf="isFieldInvalid('vehicle_annual_mileage')">
             {{ getFieldError('vehicle_annual_mileage') }}
           </div>
         </div>
         <div class="form-group">
           <label for="vehicle_ownership">Ownership *</label>
-          <select id="vehicle_ownership" formControlName="vehicle_ownership" 
-                  [class.error]="isFieldInvalid('vehicle_ownership')">
+          <select id="vehicle_ownership" formControlName="vehicle_ownership" [class.error]="isFieldInvalid('vehicle_ownership')">
             <option value="">Select Ownership</option>
             <option value="Owned">Owned</option>
             <option value="Leased">Leased</option>
@@ -334,8 +305,7 @@
       <div class="form-row">
         <div class="form-group full-width">
           <label for="vehicle_garaging_street">Street Address *</label>
-          <input type="text" id="vehicle_garaging_street" formControlName="vehicle_garaging_street" 
-                 [class.error]="isFieldInvalid('vehicle_garaging_street')">
+          <input type="text" id="vehicle_garaging_street" formControlName="vehicle_garaging_street" [class.error]="isFieldInvalid('vehicle_garaging_street')">
           <div class="error-message" *ngIf="isFieldInvalid('vehicle_garaging_street')">
             {{ getFieldError('vehicle_garaging_street') }}
           </div>
@@ -344,24 +314,21 @@
       <div class="form-row">
         <div class="form-group">
           <label for="vehicle_garaging_city">City *</label>
-          <input type="text" id="vehicle_garaging_city" formControlName="vehicle_garaging_city" 
-                 [class.error]="isFieldInvalid('vehicle_garaging_city')">
+          <input type="text" id="vehicle_garaging_city" formControlName="vehicle_garaging_city" [class.error]="isFieldInvalid('vehicle_garaging_city')">
           <div class="error-message" *ngIf="isFieldInvalid('vehicle_garaging_city')">
             {{ getFieldError('vehicle_garaging_city') }}
           </div>
         </div>
         <div class="form-group">
           <label for="vehicle_garaging_state">State *</label>
-          <input type="text" id="vehicle_garaging_state" formControlName="vehicle_garaging_state" 
-                 [class.error]="isFieldInvalid('vehicle_garaging_state')">
+          <input type="text" id="vehicle_garaging_state" formControlName="vehicle_garaging_state" [class.error]="isFieldInvalid('vehicle_garaging_state')">
           <div class="error-message" *ngIf="isFieldInvalid('vehicle_garaging_state')">
             {{ getFieldError('vehicle_garaging_state') }}
           </div>
         </div>
         <div class="form-group">
           <label for="vehicle_garaging_zip">ZIP Code *</label>
-          <input type="text" id="vehicle_garaging_zip" formControlName="vehicle_garaging_zip" 
-                 [class.error]="isFieldInvalid('vehicle_garaging_zip')">
+          <input type="text" id="vehicle_garaging_zip" formControlName="vehicle_garaging_zip" [class.error]="isFieldInvalid('vehicle_garaging_zip')">
           <div class="error-message" *ngIf="isFieldInvalid('vehicle_garaging_zip')">
             {{ getFieldError('vehicle_garaging_zip') }}
           </div>
@@ -405,8 +372,7 @@
               </div>
             </div>
             <div class="form-group">
-              <button type="button" class="btn btn-danger" (click)="removeCoverage(i)" 
-                      [disabled]="coverages.length === 1">Remove</button>
+              <button type="button" class="btn btn-danger" (click)="removeCoverage(i)" [disabled]="coverages.length === 1">Remove</button>
             </div>
           </div>
         </div>
