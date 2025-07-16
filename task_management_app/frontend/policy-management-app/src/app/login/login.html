@@ -1,0 +1,67 @@
+<!-- Login Container -->
+<div class="login-container">
+  <div class="login-card">
+    <div class="login-header">
+      <h1>Sign In</h1>
+      <p>Welcome back to Car4Sure Policy Management</p>
+    </div>
+
+        <!-- Email Input -->
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="login-form">
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input
+          type="email"
+          id="email"
+          formControlName="email"
+          class="form-control"
+          [class.error]="f['email'].invalid && f['email'].touched"
+          placeholder="Enter your email"
+        />
+              <!-- Email Validation Messages -->
+        <div class="error-message" *ngIf="f['email'].invalid && f['email'].touched">
+          <span *ngIf="f['email'].errors?.['required']">Email is required</span>
+          <span *ngIf="f['email'].errors?.['email']">Please enter a valid email</span>
+        </div>
+      </div>
+
+      <!-- Password Input -->
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          formControlName="password"
+          class="form-control"
+          [class.error]="f['password'].invalid && f['password'].touched"
+          placeholder="Enter your password"
+        />
+          <!-- Password Validation Messages -->
+        <div class="error-message" *ngIf="f['password'].invalid && f['password'].touched">
+          <span *ngIf="f['password'].errors?.['required']">Password is required</span>
+          <span *ngIf="f['password'].errors?.['minlength']">Password must be at least 8 characters</span>
+        </div>
+      </div>
+
+      <div class="error-message" *ngIf="error">
+        {{ error }}
+      </div>
+
+       <!-- Submit Button -->
+      <button
+        type="submit"
+        class="btn btn-primary btn-full"
+        [disabled]="loading || loginForm.invalid"
+      >
+             <!-- Loading Text Toggle -->
+        <span *ngIf="loading">Signing In...</span>
+        <span *ngIf="!loading">Sign In</span>
+      </button>
+    </form>
+  <!-- Footer: Link to Register -->
+    <div class="login-footer">
+      <p>Don't have an account? <a routerLink="/register">Sign up here</a></p>
+    </div>
+  </div>
+</div>
+

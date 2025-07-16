@@ -1,0 +1,82 @@
+<div class="container">
+  <div class="header">
+    <h1>Car4Sure - Policy Management</h1>
+    <div class="header-actions">
+      <div *ngIf="isAuthenticated(); else authButtons" class="user-info">
+        <span class="welcome-text">Welcome, {{ currentUser?.name }}!</span>
+        <button class="btn btn-secondary" (click)="onLogout()">Logout</button>
+        <button class="btn btn-primary" (click)="onAddNewPolicy()">Add New Policy</button>
+      </div>
+      <ng-template #authButtons>
+        <button class="btn btn-secondary" (click)="onLogin()">Login</button>
+        <button class="btn btn-primary" (click)="onRegister()">Register</button>
+      </ng-template>
+    </div>
+  </div>
+
+  <div class="content">
+    <div *ngIf="loading" class="loading">
+      <p>Please wait...</p>
+    </div>
+
+    <div *ngIf="error" class="error">
+      <p>{{ error }}</p>
+    </div>
+
+    <div *ngIf="!isAuthenticated() && !loading" class="auth-prompt">
+      <div class="auth-card">
+        <h2>Welcome to Car4Sure Policy Management</h2>
+        <p>Please sign in to manage your insurance policies</p>
+        <div class="auth-actions">
+          <button class="btn btn-primary" (click)="onLogin()">Sign In</button>
+          <button class="btn btn-secondary" (click)="onRegister()">Create Account</button>
+        </div>
+      </div>
+    </div>
+
+    <div *ngIf="isAuthenticated() && !loading && !error">
+      <div *ngIf="policies.length === 0" class="empty-state">
+        <div class="empty-icon">📋</div>
+        <h2>No policies found</h2>
+        <p>You haven't created any policies yet.</p>
+        <button class="btn btn-primary" (click)="onAddNewPolicy()">Create your first policy</button>
+      </div>
+
+      <div *ngIf="policies.length > 0" class="policies-grid">
+        <div *ngFor="let policy of policies" class="policy-card">
+          <div class="policy-header">
+            <h3>Policy #{{ policy.policy_no }}</h3>
+            <span class="policy-status" [class]="'status-' + policy.policy_status.toLowerCase()">
+              {{ policy.policy_status }}
+            </span>
+          </div>
+          
+          <div class="policy-details">
+            <div class="detail-row">
+              <strong>Policy Holder:</strong> 
+              {{ policy.policy_holder_first_name }} {{ policy.policy_holder_last_name }}
+            </div>
+            <div class="detail-row">
+              <strong>Vehicle:</strong> 
+              {{ policy.vehicle_year }} {{ policy.vehicle_make }} {{ policy.vehicle_model }}
+            </div>
+            <div class="detail-row">
+              <strong>Effective Date:</strong> 
+              {{ policy.policy_effective_date | date }}
+            </div>
+            <div class="detail-row">
+              <strong>Expiration Date:</strong> 
+              {{ policy.policy_expiration_date | date }}
+            </div>
+          </div>
+
+          <div class="policy-actions">
+            <button class="btn btn-secondary" [routerLink]="['/policy/edit', policy.id]">Edit</button>
+            <button class="btn btn-danger" (click)="deletePolicy(policy.id!)">Delete</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

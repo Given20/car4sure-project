@@ -1,0 +1,19 @@
+﻿# Node modules
+node_modules/
+dist/
+
+# Laravel
+/vendor
+/storage/*.key
+.env
+
+# Logs
+*.log
+
+# OS/system files
+.DS_Store
+Thumbs.db
+
+# IDE/editor settings
+.vscode/
+.idea/
