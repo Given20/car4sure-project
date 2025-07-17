@@ -20,7 +20,7 @@
     </div>
 
     <div *ngIf="error" class="error">
-      <p>{{error}}</p>
+      <p>{{ error }}</p>
     </div>
 
     <div *ngIf="!isAuthenticated() && !loading" class="auth-prompt">
@@ -73,10 +73,12 @@
           <div class="policy-actions">
             <button class="btn btn-secondary" [routerLink]="['/policy/edit', policy.id]">Edit</button>
             <button class="btn btn-danger" (click)="deletePolicy(policy.id!)">Delete</button>
-          </div>
-        </div>
-      </div>
-    </div>
+            <button type="button" class="btn btn-success" (click)="downloadCertificate(policy.id!)">
+              Download Certificate
+            </button>
+                </div>
+           </div>
+       </div>
   </div>
+   </div>
 </div>
-
