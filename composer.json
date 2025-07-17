@@ -1,5 +1,2 @@
 {
-    "require": {
-        "barryvdh/laravel-dompdf": "^3.1"
-    }
 }
