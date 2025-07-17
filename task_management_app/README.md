@@ -124,8 +124,6 @@ I'm already familiar with Angular and genuinely enjoy working with it, especiall
 - API protected via middleware and tokens
 
 ---
-## 📄 PDF Generation (Bonus Feature)
-I didn’t fully implement PDF certificate generation. The approach that I have used is installing the `barryvdh/laravel-dompdf` package in Laravel to generate a policy document from a Blade template containing details like policy number, policyholder name, and coverage information. The Angular frontend includes a “Download PDF” button that is disabled that would call a secure API endpoint (`/api/policies/{id}/pdf`) to trigger the download. The endpoint would fetch the policy from MySQL, render it as HTML, and convert it to a PDF using DomPDF’s streaming functionality. 
 
 ### 📸 Demo
 Or watch a demo video [here](https://drive.google.com/file/d/1Oz7rLvkzI1A2F52UzQ_DF_MG6CmUboX7/view?usp=drive_link).
