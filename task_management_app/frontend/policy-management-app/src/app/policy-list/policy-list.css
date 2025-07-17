@@ -325,6 +325,14 @@
   color: #ffffff;
   box-shadow: 0 4px 15px rgba(239, 68, 68, 0.3);
 }
+.btn-success {
+  background: #2e7859;
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(239, 68, 68, 0.2);
+  font-size: 0.75rem;      /* Smaller text */
+  padding: 0.25rem 0.5rem; /* Less padding */
+}
+
 
 .btn-danger:hover:not(:disabled) {
   background: linear-gradient(145deg, #dc2626, #b91c1c);
