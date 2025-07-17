@@ -6,7 +6,7 @@ use App\Models\Policy;
 use Illuminate\Http\Request;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Validation\ValidationException;
-use Barryvdh\DomPDF\Facade\Pdf;
+
 class PolicyController extends Controller
 {
     
@@ -217,44 +217,5 @@ class PolicyController extends Controller
             ], 404);
         }
     }
-    // Generate and download the policy certificate as PDF
-    public function generateCertificate(Request $request, string $id): JsonResponse
-    {
-        try {
-            $policy = $request->user()->policies()->findOrFail($id);
-
-            $data = [
-                'policyNo' => $policy->policy_no,
-                'policyStatus' => $policy->policy_status,
-                'policyType' => $policy->policy_type,
-                'effectiveDate' => $policy->policy_effective_date,
-                'expirationDate' => $policy->policy_expiration_date,
-                'policyHolder' => $policy->policy_holder_first_name . ' ' . $policy->policy_holder_last_name,
-                'address' => $policy->policy_holder_street . ', ' . $policy->policy_holder_city . ', ' . $policy->policy_holder_state . ' ' . $policy->policy_holder_zip,
-                'vehicle' => (object) [
-                    'year' => $policy->vehicle_year,
-                    'make' => $policy->vehicle_make,
-                    'model' => $policy->vehicle_model,
-                    'vin' => $policy->vehicle_vin,
-                ],
-                'coverages' => json_decode($policy->coverages, true), 
-                'issuedDate' => now()->format('Y-m-d H:i:s'),
-            ];
-
-            $pdf = Pdf::loadView('certificates.policy', $data);
-
-            return response()->json([
-                'success' => true,
-                'message' => 'PDF generation successful',
-                'data' => base64_encode($pdf->output()) 
-            ]);
-
-        } catch (\Exception $e) {
-            return response()->json([
-                'success' => false,
-                'message' => 'Failed to generate certificate or policy not found',
-                'error' => $e->getMessage()
-            ], 404);
-        }
-    }
 }
+
