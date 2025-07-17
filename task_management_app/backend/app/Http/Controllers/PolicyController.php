@@ -237,7 +237,7 @@ class PolicyController extends Controller
                     'model' => $policy->vehicle_model,
                     'vin' => $policy->vehicle_vin,
                 ],
-                'coverages' => json_decode($policy->coverages, true), // Assuming coverages is stored as JSON
+                'coverages' => json_decode($policy->coverages, true), 
                 'issuedDate' => now()->format('Y-m-d H:i:s'),
             ];
 
@@ -246,7 +246,7 @@ class PolicyController extends Controller
             return response()->json([
                 'success' => true,
                 'message' => 'PDF generation successful',
-                'data' => base64_encode($pdf->output()) // Encode PDF content for frontend
+                'data' => base64_encode($pdf->output()) 
             ]);
 
         } catch (\Exception $e) {
